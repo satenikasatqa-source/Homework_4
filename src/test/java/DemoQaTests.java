@@ -18,7 +18,7 @@ public class DemoQaTests {
     }
 
     @Test
-    void fillInFields() {
+    void fillInFieldsTests() {
 
         open("/automation-practice-form");
 
@@ -27,22 +27,22 @@ public class DemoQaTests {
         $("#firstName").shouldBe(visible).setValue("Ivana");
         $("#lastName").setValue("Ivanova");
         $("#userEmail").setValue("tester@gmail.com");
-        $(byText("Female")).click();
+        $("#genterWrapper").$(byText("Female")).click();
+
         $("#userNumber").setValue("9876543210");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("January");
         $(".react-datepicker__year-select").selectOption("1980");
         $(".react-datepicker__day--006:not(.react-datepicker__day--outside-month)").click();
         $("#subjectsInput").setValue("Hiking");
-        $(byText("Reading")).click();
+        $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#currentAddress").setValue("Yerevan some street");
-        $("#uploadPicture").uploadFromClasspath("For DemoQaTests.jpeg");
-        $("#state").scrollIntoView(true).click();
-        $(byText("NCR")).shouldBe(visible).click();
-        $("#city").scrollIntoView(true).click();
-        $(byText("Noida")).shouldBe(visible).click();
+        $("#uploadPicture").uploadFromClasspath("ForDemoQaTests.jpeg");
+        $("#state").scrollTo().click();
+        $("#stateCity-wrapper").$(byText("NCR")).click();
+        $("#city").click();
+        $("#stateCity-wrapper").$(byText("Noida")).click();
         $("#submit").click();
-
 
 
 
