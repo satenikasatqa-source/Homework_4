@@ -34,5 +34,4 @@ build/
 *.iml
 out/
 
-# Test resources
-src/test/resources/
+
