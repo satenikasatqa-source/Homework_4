@@ -52,7 +52,7 @@ public class DemoQaTests {
                 .shouldHave(text("Ivanova"))
                 .shouldHave(text("Female"))
                 .shouldHave(text("06 January,1980"))
-                .shouldHave(text("Hiking"))
+                .shouldHave(text("Physics"))
                 .shouldHave(text("Reading"))
                 .shouldHave(text("Yerevan some street"))
                 .shouldHave(text("For DemoQaTests.jpeg"))
